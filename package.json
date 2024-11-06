@@ -1,38 +1,33 @@
 {
-  "name": "z0ffy.github.io",
-  "version": "1.0.0",
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "fix": "eslint --fix ."
+  "name": "minimal-mistakes",
+  "version": "3.4.2",
+  "description": "Minimal Mistakes Jekyll theme npm build scripts",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/mmistakes/minimal-mistakes.git"
   },
-  "dependencies": {
-    "next": "15.0.2",
-    "next-themes": "^0.4.3",
-    "octokit": "^4.0.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
-    "react-markdown": "^9.0.1",
-    "react-syntax-highlighter": "^15.6.1",
-    "rehype-raw": "^7.0.0",
-    "remark-gfm": "^4.0.0",
-    "remark-github": "^12.0.0",
-    "rss": "^1.2.2",
-    "sakana-widget": "^2.7.0"
+  "keywords": [
+    "jekyll",
+    "theme",
+    "minimal"
+  ],
+  "author": "Michael Rose",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmistakes/minimal-mistakes/issues"
+  },
+  "homepage": "https://mmistakes.github.io/minimal-mistakes/",
+  "engines": {
+    "node": ">= 0.10.0"
   },
   "devDependencies": {
-    "@types/node": "22.9.0",
-    "@types/react": "18.3.12",
-    "@types/react-dom": "18.3.1",
-    "@types/react-syntax-highlighter": "^15.5.13",
-    "@types/rss": "^0.0.32",
-    "autoprefixer": "^10.4.20",
-    "eslint": "9.14.0",
-    "eslint-config-next": "^15.0.2",
-    "postcss": "^8.4.47",
-    "tailwindcss": "^3.4.14",
-    "typescript": "5.6.3"
+    "npm-run-all": "^1.7.0",
+    "onchange": "^2.2.0",
+    "uglify-js": "^2.6.1"
+  },
+  "scripts": {
+    "uglify": "uglifyjs assets/js/vendor/jquery/jquery-1.12.4.min.js assets/js/plugins/jquery.fitvids.js assets/js/plugins/jquery.greedy-navigation.js assets/js/plugins/jquery.magnific-popup.js assets/js/plugins/jquery.smooth-scroll.min.js assets/js/plugins/stickyfill.min.js assets/js/_main.js -c -m -o assets/js/main.min.js",
+    "watch:js": "onchange \"assets/js/**/*.js\" -e \"assets/js/main.min.js\" -- npm run build:js",
+    "build:js": "npm run uglify"
   }
 }
