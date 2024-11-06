@@ -1,7 +1,7 @@
 ---
 title: 'Redis Cluster'
 date: 2024-11-06
-permalink: /posts/2012/08/blog-post-4/
+permalink: /posts/2024/11/Redis-Cluster/
 tags:
   - cool posts
   - category1
