@@ -1,5 +1,5 @@
 ---
-title: 'Redis Cluster'
+title: 'Nginx Brotli 升级'
 date: 2024-11-06
 permalink: /posts/2024/11/nginx-brotli/
 tags:
