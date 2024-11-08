@@ -1,7 +1,7 @@
 ---
 title: 'Redis Cluster'
 date: 2024-11-06
-permalink: /posts/nginx-brotli/
+permalink: /posts/2024/11/nginx-brotli/
 tags:
   - cool posts
   - category1
