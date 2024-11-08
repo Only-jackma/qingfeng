@@ -35,18 +35,27 @@ The full-upgrade removed the old brotli package:
 Removing libnginx-mod-brotli (1.25.3-1+ubuntu22.04.1+deb.sury.org+2) ...
 ```
 
-### 解决办法
 
-```
-apt-get install libnginx-mod-http-brotli-filter
-```
+### 解决方案
+
+1. **确认 Brotli 模块是否安装**
+   首先检查 Brotli 模块是否被安装并正确配置。
+
+   ```bash
+   nginx -t
+### 重新安装 Brotli 模块
+  ** 由于在升级过程中旧的 Brotli 模块可能被移除，重新安装模块的包。**
+```apt-get install libnginx-mod-http-brotli```
+### 检查 Brotli 模块包名
+  ** 在新版本中，Brotli 模块包名可能已更改。新的包名为 libnginx-mod-http-brotli-filter。**
+  ```apt-get install libnginx-mod-http-brotli-filter```
 
 ### Nginx 版本  1.26.2
 
-参考：
+##  参考：
 
-https://github.com/oerdnj/deb.sury.org/issues/2089
+- [deb.sury.org的GitHub问题#2089](https://github.com/oerdnj/deb.sury.org/issues/2089)
 
-https://github.com/oerdnj/deb.sury.org/issues/2086
+- [deb.sury.org的GitHub问题#2086](https://github.com/oerdnj/deb.sury.org/issues/2086)
 
-https://packages.debian.org/sid/libnginx-mod-http-brotli-filter
+- [Debian软件包中的libnginx-mod-http-brotli-filter](https://packages.debian.org/sid/libnginx-mod-http-brotli-filter)
