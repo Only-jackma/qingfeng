@@ -3,9 +3,9 @@ title: 'Nginx Brotli 升级'
 date: 2024-11-06
 permalink: /posts/2024/11/nginx-brotli/
 tags:
-  - cool posts
-  - category1
-  - category2
+  - k8s
+  - nginx
+  - brotli
 ---
 
 # 升级ubuntu镜像，踩到nginx的坑
@@ -38,16 +38,17 @@ Removing libnginx-mod-brotli (1.25.3-1+ubuntu22.04.1+deb.sury.org+2) ...
 
 ### 解决方案
 
-1. **确认 Brotli 模块是否安装**
+**确认 Brotli 模块是否安装**
    首先检查 Brotli 模块是否被安装并正确配置。
 
    ```bash
    nginx -t
+   ```
 ### 重新安装 Brotli 模块
-  ** 由于在升级过程中旧的 Brotli 模块可能被移除，重新安装模块的包。**
+**由于在升级过程中旧的 Brotli 模块可能被移除，重新安装模块的包**
 ```apt-get install libnginx-mod-http-brotli```
 ### 检查 Brotli 模块包名
-  ** 在新版本中，Brotli 模块包名可能已更改。新的包名为 libnginx-mod-http-brotli-filter。**
+**在新版本中，Brotli 模块包名可能已更改。新的包名为 libnginx-mod-http-brotli-filter**
   ```apt-get install libnginx-mod-http-brotli-filter```
 
 ### Nginx 版本  1.26.2
